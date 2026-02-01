@@ -95,9 +95,11 @@ nav a {
   .enlaces {
     display: flex;
     text-align: center;
+    align-items: baseline;
 
     .github {
       font-weight: bold;
+      font-size: clamp(10px, 50%, 70px);
       margin: 10px;
       padding: 15px 15px;
       text-align: center;
@@ -119,13 +121,14 @@ nav a {
           #3a7bd5 51%,
           #00d2ff 100%
         );
-        background-position: right center; /* change the direction of the change here */
+        background-position: right center;
         color: #fff;
         text-decoration: none;
       }
     }
     .linkedin {
       font-weight: bold;
+      font-size: clamp(10px, 50%, 70px);
       margin: 10px;
       padding: 15px 15px;
       text-align: center;
@@ -146,7 +149,7 @@ nav a {
           #185a9d 51%,
           #43cea2 100%
         );
-        background-position: right center; /* change the direction of the change here */
+        background-position: right center;
         color: #fff;
         text-decoration: none;
       }
@@ -154,6 +157,7 @@ nav a {
 
     .gmail {
       font-weight: bold;
+      font-size: clamp(10px, 50%, 70px);
       margin: 10px;
       padding: 15px 15px;
       text-align: center;
@@ -174,14 +178,14 @@ nav a {
           #185a9d 51%,
           #4c43ce 100%
         );
-        background-position: right center; /* change the direction of the change here */
+        background-position: right center;
         color: #fff;
         text-decoration: none;
       }
     }
 
     svg {
-      width: 100px;
+      width: clamp(30px, 50%, 100px);
       aspect-ratio: 1/1;
       transition: a 0.2s ease;
     }
@@ -261,6 +265,19 @@ a {
       border-radius: 25px;
       width: 200px;
       aspect-ratio: 1/1;
+    }
+  }
+}
+
+@container (min-width:155.2px) {
+  .card-first {
+    .enlaces {
+      display: flex;
+      text-align: center;
+      align-items: baseline;
+      flex-wrap: wrap;
+      overflow: auto;
+      height: 165px;
     }
   }
 }
